@@ -43,7 +43,6 @@ class GFG{
         int[] B = { 5, 6, 7, 8, 9 };
 
         findConvolution(A, B);}
-
 }
 
 // This code is contributed by souravghosh0416
