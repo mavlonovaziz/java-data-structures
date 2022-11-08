@@ -1,9 +1,14 @@
 import Car.Cars;
 
+import javax.naming.ldap.SortControl;
+import javax.naming.ldap.SortResponseControl;
+import java.io.IOException;
 import java.util.*;
 
+import static java.lang.Math.E;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         List<Cars> list = new ArrayList<>();
 
@@ -44,26 +49,28 @@ public class Main {
         list1.add(cars14);
         list1.add(cars15);
 
-        list.addAll(0, list1);
-        list1.addAll(1, list);
-
-//        list.retainAll(list1);
-//
-//        list.removeAll(list1);
-//
-//
-//        System.out.println(list + "  ?");
-//
-//        System.out.println(list + "  /");
-
-        System.out.println(list1 + " |");
 
 
-//        System.out.println(Arrays.toString(new List[]{list}) + "  ");
-//        System.out.println();
+        System.out.println(Arrays.toString(new List[]{list}) + "  ");
+        System.out.println();
 
         Main obj = new Main();
         System.out.println(obj.getRandomElement(list));
+
+        list.addAll(0, list1);
+        System.out.println(list + "  ?");
+
+        list1.addAll(1, list);
+        System.out.println(list1 + " |");
+
+        list.retainAll(list1);
+        System.out.println(list1 + "  ?");
+
+        list.removeAll(list1);
+        System.out.println(list1 + "  -");
+
+
+
     }
 
     public Cars getRandomElement(List<Cars> list) {
