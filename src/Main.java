@@ -51,6 +51,8 @@ public class Main {
 
 
 
+
+
         System.out.println(Arrays.toString(new List[]{list}) + "  ");
         System.out.println();
 
@@ -68,6 +70,7 @@ public class Main {
 
         list.removeAll(list1);
         System.out.println(list1 + "  -");
+
 
 
 
